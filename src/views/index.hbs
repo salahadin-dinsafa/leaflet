@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+    integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+  <title>Hello there</title>
+  <style>
+    #map {
+      position: absolute;
+      top: 30%;
+      bottom: 0%;
+      left: 0%;
+      right: 0%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button onclick="findAddress()">Search</button>
+    <div id="results"></div>
+  </div>
+  <div class=" d-flex flex-row justify-content-around m-3">
+    <h1 class="container ">{{file.location.fields.name}}</h1>
+    <form role="form" method="post" action="http://localhost:3002/map">
+      <div class="d-flex justify-content-between">
+        <select class="form-control form-control-sm" style="margin-right: 10px; width: 200px;" name="place"
+          id="address">
+          {{#each file.accountLocation}}
+          <option style="padding: 0px 50px;" value={{this.fields.name}}>{{this.fields.name}}</option>
+          {{/each}}
+        </select>
+        <button type='submit' class="btn btn-outline-dark btn-block">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="map"></div>
+
+  <script>
+
+    let lat = {{ file.location.fields.loc.lat }}
+    let lng = {{ file.location.fields.loc.lng }}
+
+    let map = L.map('map').setView([lat, lng], 13);
+    L.tileLayer('https://api.maptiler.com/maps/hybrid/256/{z}/{x}/{y}.jpg?key=LKFVJlVNPETLFbjeIvQt', {
+      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+    }).addTo(map);
+
+    let marker = L.marker([lat, lng]).addTo(map);
+
+    marker.bindPopup(`<b>${{ file.location.fields.name }} </b>.`).openPopup();
+
+    let address = document.querySelectorAll("#address");
+
+    let results = document.querySelector("#results");
+
+    function showAddress() {
+      results.innerHTML = "";
+      if (addressArr.length > 0) {
+        addressArr.forEach(element => {
+          results.innerHTML += "<div class='results'>" + element.display_name + "<br> Lat: " + element.lat + " Lng: " + element.lon + "</div>"
+
+        })
+        console.log(addressArr[0].display_name)
+      }
+    }
+
+    function findAddress() {
+      let url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + address.value;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => addressArr = data)
+        .then(show => showAddress())
+        .catch(e => console.log(e))
+    }
+  </script>
+
+
+</body>
+
+</html>
