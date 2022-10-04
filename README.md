@@ -15,8 +15,8 @@
 <p>return Html</p> 
 <p>status 200</p>
 
-<b>Must have internet connection</b>
-<b>Try change the action attribute in <i>/src/views/index.hbs form element</i></b>
+<p><b>Must have internet connection</b></p>
+<p><b>Try change the action attribute in <i>/src/views/index.hbs form element</i></b></p>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>

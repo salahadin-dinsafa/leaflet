@@ -11,30 +11,33 @@
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
     integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
-  <title>Hello there</title>
+  <title>{{file.location.fields.name}}</title>
   <style>
     #map {
       position: absolute;
-      top: 30%;
-      bottom: 0%;
-      left: 0%;
-      right: 0%;
+      margin-top: 50px;
+      width: 100%;
+      height: 100vh;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <button onclick="findAddress()">Search</button>
-    <div id="results"></div>
-  </div>
-  <div class=" d-flex flex-row justify-content-around m-3">
-    <h1 class="container ">{{file.location.fields.name}}</h1>
-    <form role="form" method="post" action="http://localhost:3002/map">
-      <div class="d-flex justify-content-between">
-        <select class="form-control form-control-sm" style="margin-right: 10px; width: 200px;" name="place" id="address">
+
+  <div class=" d-flex flex-row justify-content-end m-3">
+    <h1 class="col d-none d-sm-block">{{file.location.fields.name}}</h1>
+    <div class="col">
+      <div class="d-flex flex-column justify-content-end d-none d-sm-block">
+        <button class="btn btn-outline-success btn-block" onclick="findAddress()">Search</button>
+        <div id="results" class="card p-3"></div>
+      </div>
+    </div>
+    <form class="col " role="form" method="post" action="http://localhost:3002/map">
+      <div class="d-flex justify-content-end">
+        <select class="form-control form-control-sm" style="margin-right: 10px; width: 200px;" name="place"
+          id="address">
           {{#each file.accountLocation}}
-          <option style="padding: 0px 50px;"  value="{{this.fields.name}}">{{this.fields.name}}</option>
+          <option style="padding: 0px 50px;" value="{{this.fields.name}}">{{this.fields.name}}</option>
           {{/each}}
         </select>
         <button type='submit' class="btn btn-outline-dark btn-block">Submit</button>
@@ -66,10 +69,14 @@
       results.innerHTML = "";
       if (addressArr.length > 0) {
         addressArr.forEach(element => {
-          results.innerHTML += "<div class='results'>" + element.display_name + "<br> Lat: " + element.lat + ", Lng: " + element.lon + "</div>"
+          results.innerHTML += "<div class='results'>#" + element.display_name + "<br> Lat: " + element.lat + ", Lng: " + element.lon + "</div>"
 
         })
-        console.log(addressArr[0].display_name)
+        addressArr.forEach(element => {
+          if (element.display_name.includes('Ethiopia')) {
+            console.log(element.display_name)
+          }
+        })
       }
     }
 

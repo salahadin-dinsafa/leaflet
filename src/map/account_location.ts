@@ -515,7 +515,7 @@ export const accountLocation = [
     "fields": {
       "name": "Aboker",
       "city_id": 7,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.3163811, Lng: 42.1185061 }
     }
   },
   {
@@ -524,7 +524,7 @@ export const accountLocation = [
     "fields": {
       "name": "Amir-Nur",
       "city_id": 7,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.3112253, Lng: 42.137476 }
     }
   },
   {
@@ -533,7 +533,7 @@ export const accountLocation = [
     "fields": {
       "name": "Dire-Teyara",
       "city_id": 7,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.607685, Lng: 41.8600363 }
     }
   },
   {
@@ -542,7 +542,7 @@ export const accountLocation = [
     "fields": {
       "name": "Erer",
       "city_id": 7,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.4713299, Lng: 41.4460115 }
     }
   },
   {
@@ -551,7 +551,7 @@ export const accountLocation = [
     "fields": {
       "name": "Hakim",
       "city_id": 7,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 12.352159, Lng: 39.5813559 }
     }
   },
   {
@@ -560,7 +560,7 @@ export const accountLocation = [
     "fields": {
       "name": "Jin'Eala",
       "city_id": 7,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.3118397, Lng: 42.1284445 }
     }
   },
   {
@@ -569,7 +569,7 @@ export const accountLocation = [
     "fields": {
       "name": "Shenkor",
       "city_id": 7,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.3151293, Lng: 42.1205105 }
     }
   },
   {
@@ -578,7 +578,7 @@ export const accountLocation = [
     "fields": {
       "name": "Sofi",
       "city_id": 7,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.2786, Lng: 42.1474 }
     }
   },
   {
@@ -587,7 +587,7 @@ export const accountLocation = [
     "fields": {
       "name": "Adama Special Zone",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.5410261, Lng: 39.2705461 }
     }
   },
   {
@@ -596,7 +596,7 @@ export const accountLocation = [
     "fields": {
       "name": "Arsi",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.0101011, Lng: 39.67167736279079 }
     }
   },
   {
@@ -605,7 +605,7 @@ export const accountLocation = [
     "fields": {
       "name": "Bale",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 47.5581077, Lng: 7.5878261 }
     }
   },
   {
@@ -614,7 +614,7 @@ export const accountLocation = [
     "fields": {
       "name": "Borena",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 5.0505913499999995, Lng: 37.97430453797929 }
     }
   },
   {
@@ -623,7 +623,7 @@ export const accountLocation = [
     "fields": {
       "name": "Buno Bedele",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.16667, Lng: 36.33333 }
     }
   },
   {
@@ -632,7 +632,7 @@ export const accountLocation = [
     "fields": {
       "name": "East Hararghe",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.8080, Lng:  41.6012 }
     }
   },
   {
@@ -641,7 +641,7 @@ export const accountLocation = [
     "fields": {
       "name": "East Shewa",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.360772350000001, Lng: 39.007447774795864 }
     }
   },
   {
@@ -650,7 +650,7 @@ export const accountLocation = [
     "fields": {
       "name": "East Welega",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.1002026, Lng: 36.54400328070325}
     }
   },
   {
@@ -659,7 +659,7 @@ export const accountLocation = [
     "fields": {
       "name": "Guji",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 5.5501401, Lng: 39.20305293917275 }
     }
   },
   {
@@ -668,7 +668,7 @@ export const accountLocation = [
     "fields": {
       "name": "Horo Guduru Welega",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.1769, Lng: 35.0388 }
     }
   },
   {
@@ -677,7 +677,7 @@ export const accountLocation = [
     "fields": {
       "name": "Illubabor",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.36351745, Lng: 35.84878724471124 }
     }
   },
   {
@@ -686,7 +686,7 @@ export const accountLocation = [
     "fields": {
       "name": "Jimma",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 7.6756152, Lng: 36.8478779 }
     }
   },
   {
@@ -695,7 +695,7 @@ export const accountLocation = [
     "fields": {
       "name": "Kelam Welega",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 36.7436, Lng: 76.0624 }
     }
   },
   {
@@ -704,7 +704,7 @@ export const accountLocation = [
     "fields": {
       "name": "North Shewa",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.651459500000001, Lng: 38.85106109864603 }
     }
   },
   {
@@ -713,16 +713,16 @@ export const accountLocation = [
     "fields": {
       "name": "Oromia Special Zone",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.5410261, Lng: 39.2705461 }
     }
   },
   {
     "model": "accounts.ZoneOrSubcity",
     "pk": 70,
     "fields": {
-      "name": "Southwest Shewa",
+      "name": "South West Shewa",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.6320905, Lng: 38.16993980232385 }
     }
   },
   {
@@ -731,7 +731,7 @@ export const accountLocation = [
     "fields": {
       "name": "West Arsi",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.9996062000000006, Lng: 39.20513720125466 }
     }
   },
   {
@@ -740,7 +740,7 @@ export const accountLocation = [
     "fields": {
       "name": "West Guji",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.9901969, Lng: 35.8239985 }
     }
   },
   {
@@ -749,7 +749,7 @@ export const accountLocation = [
     "fields": {
       "name": "West Hararghe",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.8080 , Lng: 41.6012 }
     }
   },
   {
@@ -758,7 +758,7 @@ export const accountLocation = [
     "fields": {
       "name": "West Shewa",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.12706925, Lng: 37.85556295816925 }
     }
   },
   {
@@ -767,7 +767,7 @@ export const accountLocation = [
     "fields": {
       "name": "West Welega",
       "city_id": 8,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9, Lng: 35.5 }
     }
   },
   {
@@ -776,7 +776,7 @@ export const accountLocation = [
     "fields": {
       "name": "Alaba",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 7.4933, Lng:  38.1900 }
     }
   },
   {
@@ -785,7 +785,7 @@ export const accountLocation = [
     "fields": {
       "name": "Alle",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 13.6069, Lng: 40.6617 }
     }
   },
   {
@@ -794,7 +794,7 @@ export const accountLocation = [
     "fields": {
       "name": "Amaro",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 5.8269, Lng: 37.7238 }
     }
   },
   {
@@ -803,7 +803,7 @@ export const accountLocation = [
     "fields": {
       "name": "Basketo",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.2659302, Lng: 36.567766375204656 }
     }
   },
   {
@@ -812,7 +812,7 @@ export const accountLocation = [
     "fields": {
       "name": "Bench Maji",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.2848715, Lng: 35.495533749688526 }
     }
   },
   {
@@ -821,7 +821,7 @@ export const accountLocation = [
     "fields": {
       "name": "Burji",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 5.5152, Lng: 37.7663 }
     }
   },
   {
@@ -830,7 +830,7 @@ export const accountLocation = [
     "fields": {
       "name": "Dawro",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.96864375, Lng: 37.104763568953004 }
     }
   },
   {
@@ -839,7 +839,7 @@ export const accountLocation = [
     "fields": {
       "name": "Dirashe",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 5.58771895, Lng: 37.2587716745459 }
     }
   },
   {
@@ -848,7 +848,7 @@ export const accountLocation = [
     "fields": {
       "name": "Gamo Gofa",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.170114399999999, Lng: 37.26206970320297 }
     }
   },
   {
@@ -857,7 +857,7 @@ export const accountLocation = [
     "fields": {
       "name": "Gedeo",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.1300117499999995, Lng: 38.22347718740599 }
     }
   },
   {
@@ -866,7 +866,7 @@ export const accountLocation = [
     "fields": {
       "name": "Gurage",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 8.273822, Lng: 37.7620281 }
     }
   },
   {
@@ -875,7 +875,7 @@ export const accountLocation = [
     "fields": {
       "name": "Hadiya",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 7.5895649, Lng: 37.79793788949466 }
     }
   },
   {
@@ -884,7 +884,7 @@ export const accountLocation = [
     "fields": {
       "name": "Keffa",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 7.15543145, Lng: 36.207228767321794 }
     }
   },
   {
@@ -893,7 +893,7 @@ export const accountLocation = [
     "fields": {
       "name": "Kembata Tembaro",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 7.3103488500000005, Lng: 37.85627044775052 }
     }
   },
   {
@@ -902,7 +902,7 @@ export const accountLocation = [
     "fields": {
       "name": "Konso",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 5.25, Lng: 37.5 }
     }
   },
   {
@@ -911,7 +911,7 @@ export const accountLocation = [
     "fields": {
       "name": "Konta",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.9167, Lng: 36.5833 }
     }
   },
   {
@@ -920,7 +920,7 @@ export const accountLocation = [
     "fields": {
       "name": "Sheka",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 7.5073076, Lng: 35.3585049310298 }
     }
   },
   {
@@ -929,7 +929,7 @@ export const accountLocation = [
     "fields": {
       "name": "Silt'e",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 7.8787, Lng:  38.2322 }
     }
   },
   {
@@ -938,7 +938,7 @@ export const accountLocation = [
     "fields": {
       "name": "South Omo",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 5.45749685, Lng: 36.40037948099289 }
     }
   },
   {
@@ -947,7 +947,7 @@ export const accountLocation = [
     "fields": {
       "name": "Wolayita",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.850691599999999, Lng: 37.70567905641241 }
     }
   },
   {
@@ -956,7 +956,7 @@ export const accountLocation = [
     "fields": {
       "name": "Yem",
       "city_id": 9,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 7.8565, Lng:  37.4254 }
     }
   },
   {
@@ -965,7 +965,7 @@ export const accountLocation = [
     "fields": {
       "name": "Aleta Wendo",
       "city_id": 1,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.6037191, Lng: 38.4232728 }
     }
   },
   {
@@ -974,7 +974,7 @@ export const accountLocation = [
     "fields": {
       "name": "Arbegona",
       "city_id": 1,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.6914, Lng:  38.7198 }
     }
   },
   {
@@ -983,7 +983,7 @@ export const accountLocation = [
     "fields": {
       "name": "Aroresa",
       "city_id": 1,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 9.4399966, Lng: 43.0907615 }
     }
   },
   {
@@ -992,7 +992,7 @@ export const accountLocation = [
     "fields": {
       "name": "Bensa",
       "city_id": 1,
-      "loc": { Lat: 11.7559, Lng: 40.9587 }
+      "loc": { Lat: 6.499998, Lng:   38.83333 }
     }
   },
   {
