@@ -12,4 +12,8 @@ export class LocationDto {
   @IsOptional()
   @IsNumber()
   Lng: number;
+
+  @IsOptional()
+  @IsString()
+  polygon_svg: string
 }

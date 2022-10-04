@@ -2,7 +2,7 @@
 
 <h6>/map</h6>
 <div>
-<p style="color:red;"></p>
+<p></p>
 <b>Query Param</b>
 <i>name=#place name</i>
 <i>Lat=#Latitude</i>
