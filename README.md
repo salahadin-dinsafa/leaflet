@@ -4,9 +4,9 @@
 <div>
 <p style="color:red;"></p>
 <b>Query Param</b>
-<i>name=<place name></i>
-<i>Lat=<Latitude></i>
-<i>name=<Longitude></i>
+<i>name=#place name</i>
+<i>Lat=#Latitude</i>
+<i>Lng=#Longitude</i>
 </div>
 <p>GET request</p>
 <p>return Html</p> 
