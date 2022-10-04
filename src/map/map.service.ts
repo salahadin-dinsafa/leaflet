@@ -1,14 +1,24 @@
 import { Injectable } from '@nestjs/common';
+
 import { accountLocation } from './account_location';
+import { LocationType } from './type/location.type';
+
 @Injectable()
 export class MapService {
 
-  staticMap() {
-    return { location: accountLocation[0], accountLocation: accountLocation };
+  staticMap(locationType: LocationType) {
+    const { Lat, Lng } = locationType;
+
+    if (!Lat || !Lng) {
+      const location: LocationType = {
+        name: "Addis Ababa",
+        Lat: 8.98066,
+        Lng: 38.7578
+      }
+      return { location: location, accountLocation: accountLocation };
+    }
+
+    return { location: locationType, accountLocation: accountLocation };
   }
-  dynamicMap(file: any) {
-    const { place } = file;
-    const location = accountLocation.find(loc => loc.fields.name === place);
-    return { location: location, accountLocation: accountLocation };
-  }
+
 }

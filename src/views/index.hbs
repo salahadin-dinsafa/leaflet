@@ -11,7 +11,7 @@
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
     integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
-  <title>{{file.location.fields.name}}</title>
+  <title>{{file.location.name}}</title>
   <style>
     #map {
       position: absolute;
@@ -22,34 +22,25 @@
 </head>
 
 <body>
-
   <div class=" d-flex flex-row justify-content-end m-3">
-    <h1 class="col d-none d-sm-block">{{file.location.fields.name}}</h1>
-    <div class="col">
-      <div class="d-flex flex-column justify-content-end d-none d-sm-block">
-        <button class="btn btn-outline-success btn-block" onclick="findAddress()">Search</button>
-        <div id="results" class="card p-3"></div>
-      </div>
+    <h1 class="col d-none d-sm-block">{{file.location.name}}</h1>
+
+    <div class="d-flex justify-content-end">
+      <select class="form-control form-control-sm" style="margin-right: 10px; width: 200px;" name="place" id="address">
+        {{#each file.accountLocation}}
+        <option style="padding: 0px 50px;" value="{{this.fields.name}}">{{this.fields.name}}</option>
+        {{/each}}
+      </select>
+      <button onclick="findAddress()" class="btn btn-outline-dark btn-block">Submit</button>
     </div>
-    <form class="col " role="form" method="post" action="http://localhost:3002/map">
-      <div class="d-flex justify-content-end">
-        <select class="form-control form-control-sm" style="margin-right: 10px; width: 200px;" name="place"
-          id="address">
-          {{#each file.accountLocation}}
-          <option style="padding: 0px 50px;" value="{{this.fields.name}}">{{this.fields.name}}</option>
-          {{/each}}
-        </select>
-        <button type='submit' class="btn btn-outline-dark btn-block">Submit</button>
-      </div>
-    </form>
+
   </div>
 
   <div id="map"></div>
 
   <script>
-
-    let lat = {{ file.location.fields.loc.Lat }}
-    let lng = {{ file.location.fields.loc.Lng }}
+    let lat = {{ file.location.Lat }}
+    let lng = {{ file.location.Lng }}
 
     let map = L.map('map').setView([lat, lng], 10);
     L.tileLayer('https://api.maptiler.com/maps/hybrid/256/{z}/{x}/{y}.jpg?key=LKFVJlVNPETLFbjeIvQt', {
@@ -58,29 +49,31 @@
 
     let marker = L.marker([lat, lng]).addTo(map);
 
-    marker.bindPopup(`<b>${{ file.location.fields.name }} </b>.`).openPopup();
+    marker.bindPopup(`<b>${{ file.location.name }} </b>.`).openPopup();
 
     let address = document.querySelector("#address");
 
-    let results = document.querySelector("#results");
-
+    var searchParams = new URLSearchParams(window.location.search);
     function showAddress() {
-      results.innerHTML = "";
+      searchParams.delete('name')
+      searchParams.delete('Lat')
+      searchParams.delete('Lng')
+      window.location.search = searchParams.toString()
       if (addressArr.length > 0) {
         addressArr.forEach(element => {
-          results.innerHTML += "<div class='results'>#" + element.display_name + "<br> Lat: " + element.lat + ", Lng: " + element.lon + "</div>"
-
-        })
-        addressArr.forEach(element => {
           if (element.display_name.includes('Ethiopia')) {
-            console.log(element.display_name)
+            searchParams.set('name', address.value);
+            searchParams.set('Lat', element.lat);
+            searchParams.set('Lng', element.lon);
           }
+          window.location.search = searchParams.toString()
         })
       }
+
     }
 
     function findAddress() {
-      let url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + address.value;
+      let url = "https://nominatim.openstreetmap.org/search?format=json&countrycodes=ET&q=" + address.value;
       fetch(url)
         .then(response => response.json())
         .then(data => addressArr = data)

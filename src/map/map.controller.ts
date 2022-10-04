@@ -1,5 +1,7 @@
-import { Controller, Get, Post, Render, Req } from '@nestjs/common';
+import { Controller, Get, Post, Query, Render, Req, ValidationPipe } from '@nestjs/common';
 import { Request } from 'express';
+
+import { LocationDto } from './dto/location.dto';
 import { MapService } from './map.service';
 
 @Controller('map')
@@ -13,17 +15,16 @@ export class MapController {
     return 'Hello Render';
   }
 
+
   @Get()
   @Render('index')
-  getMap() {
-    const file = this.mapService.staticMap();
-    return { file }
-  }
-
-  @Post()
-  @Render('index')
-  dynamicMap(@Req() req: Request) {
-    const file = this.mapService.dynamicMap(req.body);
+  getMap(@Query(new ValidationPipe({
+    whitelist: true,
+    transform: true,
+    transformOptions: { enableImplicitConversion: true },
+    forbidNonWhitelisted: true
+  })) query?: LocationDto) {
+    const file = this.mapService.staticMap(query);
     return { file }
   }
 }
