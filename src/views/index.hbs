@@ -32,10 +32,9 @@
     <h1 class="container ">{{file.location.fields.name}}</h1>
     <form role="form" method="post" action="http://localhost:3002/map">
       <div class="d-flex justify-content-between">
-        <select class="form-control form-control-sm" style="margin-right: 10px; width: 200px;" name="place"
-          id="address">
+        <select class="form-control form-control-sm" style="margin-right: 10px; width: 200px;" name="place" id="address">
           {{#each file.accountLocation}}
-          <option style="padding: 0px 50px;" value={{this.fields.name}}>{{this.fields.name}}</option>
+          <option style="padding: 0px 50px;"  value="{{this.fields.name}}">{{this.fields.name}}</option>
           {{/each}}
         </select>
         <button type='submit' class="btn btn-outline-dark btn-block">Submit</button>
@@ -47,10 +46,10 @@
 
   <script>
 
-    let lat = {{ file.location.fields.loc.lat }}
-    let lng = {{ file.location.fields.loc.lng }}
+    let lat = {{ file.location.fields.loc.Lat }}
+    let lng = {{ file.location.fields.loc.Lng }}
 
-    let map = L.map('map').setView([lat, lng], 13);
+    let map = L.map('map').setView([lat, lng], 10);
     L.tileLayer('https://api.maptiler.com/maps/hybrid/256/{z}/{x}/{y}.jpg?key=LKFVJlVNPETLFbjeIvQt', {
       attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
     }).addTo(map);
@@ -59,7 +58,7 @@
 
     marker.bindPopup(`<b>${{ file.location.fields.name }} </b>.`).openPopup();
 
-    let address = document.querySelectorAll("#address");
+    let address = document.querySelector("#address");
 
     let results = document.querySelector("#results");
 
@@ -67,7 +66,7 @@
       results.innerHTML = "";
       if (addressArr.length > 0) {
         addressArr.forEach(element => {
-          results.innerHTML += "<div class='results'>" + element.display_name + "<br> Lat: " + element.lat + " Lng: " + element.lon + "</div>"
+          results.innerHTML += "<div class='results'>" + element.display_name + "<br> Lat: " + element.lat + ", Lng: " + element.lon + "</div>"
 
         })
         console.log(addressArr[0].display_name)

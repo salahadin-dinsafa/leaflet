@@ -8,7 +8,7 @@ export class MapService {
   }
   dynamicMap(file: any) {
     const { place } = file;
-    const location = accountLocation.find(loc => loc.fields.name.includes(place));
+    const location = accountLocation.find(loc => loc.fields.name === place);
     return { location: location, accountLocation: accountLocation };
   }
 }
