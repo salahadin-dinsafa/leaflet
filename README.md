@@ -1,6 +1,13 @@
 <h2>API</h2>
 
 <h6>/map</h6>
+<div>
+<p style="color:red;"></p>
+<b>Query Param</b>
+<i>name=<place name></i>
+<i>Lat=<Latitude></i>
+<i>name=<Longitude></i>
+</div>
 <p>GET request</p>
 <p>return Html</p> 
 <p>status 200</p>
@@ -10,10 +17,6 @@
 <p>return string</p> 
 <p>status 200</p>
 
-<h6>/map</h6>
-<p>POST request </p>
-<p>return Html</p> 
-<p>status 200</p>
 
 <p><b>Must have internet connection</b></p>
 <p><b>Try change the action attribute in <i>/src/views/index.hbs form element</i></b></p>
