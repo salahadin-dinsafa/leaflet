@@ -1,3 +1,21 @@
+<h2>API</h2>
+
+<h6>/map</h6>
+<p>GET request</p>
+<p>return Html</p> 
+<p>status 200</p>
+
+<h6>/map/render</h6>
+<p>GET request</p>
+<p>return string</p> 
+<p>status 200</p>
+
+<h6>/map</h6>
+<p>POST request </p>
+<p>return Html</p> 
+<p>status 200</p>
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
